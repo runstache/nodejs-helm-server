@@ -5,7 +5,7 @@ const app = express();
 
 const app_port = process.env.PORT || 8089
 
-app.use(express.static('src/charts'));
+app.use(express.static('src'));
 
 const server = app.listen(app_port, function() {
   const port = server.address().port;

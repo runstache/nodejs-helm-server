@@ -4,22 +4,22 @@ RUN apt-get update -y
 RUN apt-get upgrade -y
 
 
-#FROM base as chartserver
+FROM base as chartserver
 
-#EXPOSE 8089
+EXPOSE 8089
 
-#WORKDIR /app/charts
+WORKDIR /app/charts
 
-#COPY /src/charts /app/charts
+COPY /src/charts /app/charts
 
-#WORKDIR /app
+WORKDIR /app
 
-#COPY /src/package*.json ./
-#COPY /src/server.js ./
+COPY ./package*.json ./
+COPY ./server.js ./
 
-#RUN npm install
+RUN npm install
 
-#CMD ["node", "server.js"]
+CMD ["node", "server.js"]
 
 
 
